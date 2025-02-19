@@ -1,580 +1,260 @@
-# a = 10
+# 📌 Type conversion functions in Python:
+# 1. int() - Convert to integer
+# 2. float() - Convert to float
+# 3. str() - Convert to string
+# 4. ord() - Get ASCII value of a character
+# 5. chr() - Get character from ASCII value
+# 6. bin() - Convert to binary
+# 7. hex() - Convert to hexadecimal
+# 8. oct() - Convert to octal
+# 9. complex() - Create complex numbers
 
-# print(a)
+x = ord('a')  # ASCII value of 'a'
+print(x)  # Output: 97
 
-# a = 5 # int
-# b = 3.7 # float
-# c = 'Hello' # str
-# d = "Hello" # str
-# e = '''Hello
-# Python''' # multi-line string
-# f = True # bool
-# g = (4 + 2j) # complex
+x = chr(97)  # Character from ASCII value
+print(x)  # Output: 'a'
 
-# print(a)
+y = bin(10)  # Convert to binary
+print(y)  # Output: '0b1010'
+
+z = hex(55)  # Convert to hexadecimal
+print(z)  # Output: '0x37'
+
+"""
+==========================================
+  📌 Data Types in Python
+==========================================
+"""
+
+# Python supports different types of data:
+
+# 1. Primitive Data Types:
+#    - int, float, string, complex, bool, bytes
+
+x = complex(2, 4)  # Complex number
+print(x)  # Output: (2+4j)
+
+a = True  # Boolean type
+print(a, type(a))  # Output: True <class 'bool'>
+
+name = "Pawan"  # String
+print(name, type(name))  # Output: Pawan <class 'str'>
+
+y = b"Pawan"  # Bytes data type
+print(y)  # Output: b'Pawan'
+
+"""
+==========================================
+  ❌ Immutable and Mutable Data Types
+==========================================
+"""
+
+# 📌 Strings in Python are immutable (cannot be modified).
+
+name = "abc"
+# name[0] = 'x'  # ❌ TypeError: 'str' object does not support item assignment
+
+print(name)  # Output: 'abc'
+
+"""
+==========================================
+  📚 Collection Data Types
+==========================================
+"""
+
+# 📌 Python supports four main collection data types:
+# 1. List - Ordered, mutable
+# 2. Set - Unordered, unique elements
+# 3. Tuple - Ordered, immutable
+# 4. Frozenset - Immutable version of set
+
+# ✅ List - Mutable (Can be modified)
+l = ["Pawan", 1, 3, 56, 78, 90]
+print(l)
+
+l[3] = 100  # Modifying an element
+print(l)  # Output: ['Pawan', 1, 3, 100, 78, 90]
+
+# ✅ Set - Unordered, unique elements, removes duplicates
+s = {12, 34, 678, 90, "pawan", 12}  # Duplicate 12 will be removed
+print(s)  # Output: {34, 12, 90, 'pawan', 678} (order may vary)
+
+"""
+==========================================
+  🎯 Summary:
+==========================================
+
+✅ Python is an easy-to-learn, dynamically typed, and case-sensitive language.
+✅ print() function is used to display output with optional separators and end characters.
+✅ Variables do not need explicit type declaration.
+✅ Constants can be simulated using a custom class.
+✅ Input is taken as a string and must be type-casted when needed.
+✅ Various type conversion functions help in data manipulation.
+✅ Strings are immutable, but lists are mutable.
+✅ Sets automatically remove duplicates.
+
+"""
+
+# End of lecture 🚀
+
+
+# A = 10
+
+# print(A)
+
+# print(type(A))
+
+# A = 12.7
+
+# print(A)
+
+
+# In Python, you can't create truly constant variables, but you can enforce immutability using custom classes. Below are different approaches to prevent reassignment.
+
+
+# class Constant:
+#     def __setattr__(self, name, value):
+#         if hasattr(self, name):  # If the attribute is already set, prevent reassignment
+#             raise TypeError(f"Cannot modify constant '{name}'")
+#         super().__setattr__(name, value)
+
+# const = Constant()
+# const.A = 10   # ✅ Allowed: First assignment
+# print(const.A) # 10
+
+# const.A = 12.7 # ❌ TypeError: Cannot modify constant 'A'
+
+# python case sensitive 
+
+
+# B = 10
+
+# b = 20
+
 # print(b)
-# print(c)
-# print(d)
-# print(e)
-# print(f)
-# print(g)
+# print(B)
 
 
-# Collection Datatypes
 
-# l = [3, 6, 7.9, True, 3, 6] # list - mutable
-# l[1] = 99
-# t = (5, 2, 9) # tuple - immutable
-# # t[0] = 45  # not ok
-# s = {2, 4, 8, 2, 6, 4} # set - mutable
-# f = frozenset({2, 3, 5, 7, 2, 5}) # immutable => dublicate
-# d = {'id': 1, 'name': 'Rahul', 'age': 20} # dict - mutable
+# How to take input from user?
 
-# d['age'] = 44
+# x = 10
+# print(x)
 
-# # d['name'] = 'Manish'
 
-# d.update({'name':"Pawan",'age':990})
+# x = input()
+
+# print(x)
+# print("Enter Number : ")
+# x = input()
+
+# print(x)
+
+# x = input("Enter Number : ")
+
+# print("Value : ",x)
+
+# Type Casting Constructor
+
+
+# x = int(input("Enter Number : "))
+
+# print("Value : ",x)
+# print(type(x))
+
+"""
+1. int()
+2. float()
+3. str()
+4. ord()
+5. chr()
+6. bin()
+7. hex()
+8. oct()
+9. complex() """
+
+# x = 12
+
+# print(str(x))
+# print(type(str(x)) )
+
+# x = ord('a')
+
+# print(x)
+
+
+# x = chr(97)
+
+# print(x)
+
+
+# y = bin(10)
+# print(y)
+
+# y = bin(5)
+# print(y)
+
+
+# z = hex(55)
+
+# print(z)
+
+
+
+# DataType
+
+# 1. primitive datatype -> integer, float, string, complex, bool, bytes
+
+# x = complex(2,4)
+
+# print(x)
+
+# a = True
+# print(a)
+# print(type(a))
+
+# name = "Pawan"
+
+# print(name)
+# print(type(name))
+
+
+# y = b"Pawan"
+
+# print(y)  # Output: b'Pawan'
+
+# # Attempt to modify an element of bytes
+# y[0] = b'H'  # ❌ TypeError: 'bytes' object does not support item assignment
+
+# string
+
+# name = "abc"
+
+# name[0] = 'x'  # ❌ TypeError: 'str' object does not support item assignment
+
+# print(name)
+
+
+# 2. collection datatype
+
+# 1.list
+# 2. set
+# 3. tuple
+# 4. frozenset
+
+
+
+#list -> mutable
+
+# l = ["Pawan",1,3,56,78,90]
+# print(l)
+# l[3] = 100
 
 # print(l)
-# print(t)
-# print(s)
-# print(f)
-# print(d)
 
+#set -> unique , remove dublicate
 
-# 1. Convert Tuple to List and Modify
-# Since lists are mutable, you can convert the tuple to a list, modify the value, and convert it back to a tuple.
+# s = {12,34,678,90,"pawan",12}
 
-# t = (5, 2, 9)  # Tuple (immutable)
-
-# # Convert to list
-# temp_list = list(t)
-
-# # Modify the value (e.g., change 2 to 7)
-# temp_list[1] = 7
-
-# # Convert back to tuple
-# t = tuple(temp_list)
-
-# print(t)
-
-
-# In Python, a frozenset is an immutable version of a set, meaning its elements cannot be changed after creation. However, just like a normal set, a frozenset does not allow duplicate values.
-
-# f = frozenset({2, 3, 5, 7, 2, 5})  # Duplicate values included
-# print(f)
-
-
-# marks = int(input("Enter Number :"))
-
-# print("Marks : ",marks)
-
-
-# marks = float(input("Enter Number :"))
-
-# print("Marks : ",marks)
-
-
-#int 
-#float
-#string
-#boolean
-
-# In Python, there are several built-in data types, categorized as follows:
-
-# ### 1. **Numeric Types**
-#    - `int` → Integer (e.g., `10`, `-5`)
-#    - `float` → Floating-point number (e.g., `10.5`, `-3.14`)
-#    - `complex` → Complex numbers (e.g., `2 + 3j`, `-1j`)
-
-# ### 2. **Sequence Types**
-#    - `str` → String (e.g., `"Hello"`, `'Python'`)
-#    - `list` → List (e.g., `[1, 2, 3]`, `["apple", "banana"]`)
-#    - `tuple` → Tuple (e.g., `(1, 2, 3)`, `("red", "blue")`)
-#    - `range` → Range (e.g., `range(5)` → `0,1,2,3,4`)
-
-# ### 3. **Set Types**
-#    - `set` → Unordered collection of unique items (e.g., `{1, 2, 3}`)
-#    - `frozenset` → Immutable set (e.g., `frozenset({1, 2, 3})`)
-
-# ### 4. **Mapping Type**
-#    - `dict` → Dictionary (key-value pairs) (e.g., `{"name": "Alice", "age": 25}`)
-
-# ### 5. **Boolean Type**
-#    - `bool` → Boolean (`True`, `False`)
-
-# ### 6. **Binary Types**
-#    - `bytes` → Immutable sequence of bytes (e.g., `b"Hello"`)
-#    - `bytearray` → Mutable sequence of bytes (e.g., `bytearray(5)`)
-#    - `memoryview` → Memory view object (e.g., `memoryview(b"Hello")`)
-
-# ### 7. **None Type**
-#    - `NoneType` → Represents absence of value (`None`)
-
-# ### Summary:
-# Python has **14** fundamental data types categorized under different types. Let me know if you need further clarification! 🚀
-
-
-# a = `b"Manish"`
-
-# print(a)  // Output :  b'Manish'
-
-
-
-# b =10
-# c=10
-
-# a = bool(b==c)
-
-# print(a)  // output : True
-
-
-
-# name = input("Enter Name : ")
-
-# print(name)  // Pawan
-
-# Method :1
-'''
-name = input("Enter Name: ")
-age = int(input("Enter Age: "))
-address = input("Enter Address: ")
-
-print(f'Hello, My name is {name}, I am {age} years old, and I belong to {address}.')'''
-
-
-#Method : 2
-
-'''  
-name = input("Enter Name: ")
-age = int(input("Enter Age: "))
-address = input("Enter Address: ")
-
-print("Hello, My name is {}, I am {} years old, and I belong to {}.".format(name, age, address))
-
-'''
-
-#  Floor Divide and Assign (//=) in Python -> complete quosent -> remove de
-
-# a = 17
-# b = 3
-
-# a //= b  # Equivalent to a = a // b
-
-# print(a)  # Output: 5
-
-
-# a = -19
-# b = 3
-
-# a //= b  
-
-# print(a)  # Output: -7  (answer -> if value in decimal then it increase by one)
-
-# a = 19
-# b = 3
-
-# a //= b  
-
-# print(a)  # Output: 6  (answer -> if value in decimal then it decrease by one)
-
-
-"""
-
-Your concept is **partially correct**, but let's clarify it completely.  
-
-### **Correct Concept for Floor Division (`//`)**
-- **Floor division (`//`) always rounds down to the nearest lower integer** (not necessarily increasing or decreasing by 1).
-- The rounding follows the **mathematical floor function**:
-  - For **positive numbers**, it behaves like normal integer division.
-  - For **negative numbers**, it rounds further **down** (away from zero).
-
----
-
-### **Corrected Explanation of Your Code:**
-```python
-a = -19
-b = 3
-
-a //= b  
-
-print(a)  # Output: -7  ✅
-```
-✔ **Explanation:**
-- `-19 ÷ 3 = -6.3333...`
-- Floor division **rounds down** to the nearest lower integer → `-7` (not `-6`).
-
----
-
-```python
-a = 19
-b = 3
-
-a //= b  
-
-print(a)  # Output: 6  ✅
-```
-✔ **Explanation:**
-- `19 ÷ 3 = 6.3333...`
-- Floor division **rounds down** to `6` (not `5`).
-
----
-
-### **Final Concept:**
-- **For positive numbers** → `//` rounds **down**, but the value decreases only if the result is not already an integer.
-- **For negative numbers** → `//` rounds **further down** (away from zero), making the number **more negative**.
-
-Would you like more examples? 😊🚀
-
-"""
-
-
-
-# Membership Operators
-
-# Example 1: Using in with a List
-
-# lst = [1, 2, 3, 4, 5]
-
-# print(3 in lst)   # Output: True
-# print(10 in lst)  # Output: False
-
-
-# ✅ Explanation:
-
-# 3 in lst → ✅ True (since 3 is in the list)
-# 10 in lst → ❌ False (since 10 is not in the list)
-
-
-
-# Example 2: Using not in with a List
-
-
-# lst = [1, 2, 3, 4, 5]
-
-# print(6 not in lst)  # Output: True
-# print(2 not in lst)  # Output: False
-
-# ✅ Explanation:
-
-# 6 not in lst → ✅ True (since 6 is not in the list)
-# 2 not in lst → ❌ False (since 2 is in the list)
-
-
-# Example 3: Using in and not in with a String
-
-# text = "Hello, World!"
-
-# print("Hello" in text)      # Output: True
-# print("Python" not in text) # Output: True
-
-
-# ✅ Explanation:
-
-# "Hello" in text → ✅ True (Hello exists in the string).
-# "Python" not in text → ✅ True (Python is not in the string).
-
-
-# Example 4: Using in with a Tuple
-
-
-# tup = (10, 20, 30, 40)
-
-# print(20 in tup)   # Output: True
-# print(50 in tup)   # Output: False
-
-
-# ✅ Explanation:
-
-# 20 in tup → ✅ True (20 exists in the tuple).
-# 50 in tup → ❌ False (50 is not in the tuple).
-
-
-
-
-# Example 5: Using in with a Dictionary (Keys Only)
-
-# person = {"name": "Pawan", "age": 25, "city": "Azamgarh"}
-
-# print("name" in person)      # Output: True
-# print("country" not in person)  # Output: True
-
-
-# ✅ Explanation:
-
-# "name" in person → ✅ True (name is a key in the dictionary).
-# "country" not in person → ✅ True (country is not a key in the dictionary).
-
-
-# Identity Operators (is, is not) in Python
-
-# Example 1: Using is with Immutable Types (Integers)
-
-# x = 5
-# y = 5  # Small integers (-5 to 256) are stored in the same memory location
-
-# print(x is y)  # Output: True
-
-
-# ✅ Explanation:
-
-# Python caches small integers (-5 to 256), so x and y share the same memory address.
-
-
-# Example 2: Using is not with Lists (Mutable Types)
-
-# a = [1, 2, 3]
-# b = [1, 2, 3]  # Even though the values are the same, they are stored in different memory locations
-
-# print(a is not b)  # Output: True
-
-# ✅ Explanation:
-
-# Lists are mutable, so a and b have different memory addresses, even though their values are the same.
-
-
-# Example 3: Using is with Strings (Immutable)
-
-# s1 = "hello"
-# s2 = "hello"
-
-# print(s1 is s2)  # Output: True
-
-# ✅ Explanation:
-
-# Python optimizes memory for short strings, so s1 and s2 share the same memory address.
-
-# Example 4: Using is with None
-
-# x = None
-# y = None
-
-# print(x is y)  # Output: True
-
-# ✅ Explanation:
-
-# None is a singleton object in Python, so all None variables refer to the same memory location.
-
-
-
-# Example 5: Difference Between == and is
-
-# list1 = [10, 20, 30]
-# list2 = [10, 20, 30]
-
-# print(list1 == list2)  # Output: True  (Values are the same)
-# print(list1 is list2)  # Output: False (Different memory locations)
-
-
-# ✅ Explanation:
-
-# == checks values → ✅ True
-# is checks memory locations → ❌ False
-
-
-
-# a = 10
-# b = 5
-
-# # Arithmetic Operators
-# print(a + b)  # Output: 15
-
-# # Comparison Operators
-# print(a > b)  # Output: True
-
-# # Logical Operators
-# print(a > 5 and b < 10)  # Output: True
-
-# # Bitwise Operators
-# print(a & b)  # Output: 0
-
-# # Assignment Operators
-# a += b
-# print(a)  # Output: 15
-
-# # Identity Operators
-# x = [1, 2, 3]
-# y = x
-# print(x is y)  # Output: True
-
-# # Membership Operators
-# print(3 in x)  # Output: True
-
-
-# # Logical Operators
-# print(a > 5 or b < 1)  # Output: True
-
-
-# true_part if condition else false_part
-
-# a = 20
-# b = 102
-
-# print("A Greater") if a>b else print("B greater")
-
-
-# marks > 80  -> marks >=90 -> A+ grade, marks < 90 -> A Grade
-
-
-# marks = 75
-
-# print("A+ Grade") if marks >=90 else print("A Grade") if marks >= 80 else print("You are not eligible")
-
-
-# num = 1
-# while num<=10:
-#   print(num)
-#   # num = num+1
-#   num+=1
-
-# num = 10
-# while num>=1:
-#   print(num)
-#   # num = num+1
-#   num-=1
-
-
-
-
-# print(list(range(10)))
-
-# print(set(range(10)))
-
-# print(tuple(range(10)))
-
-# range(1, 11) 
-
-# print(list(range(1,11)))
-# print(list(range(3,11)))
-
-# range(start, end, step)
-
-# print(list(range(3,11,7)))  #[3, 10]
-
-
-# for loop
-
-'''
-for var in sequence:
-    body
-'''
-
-# for i in range(1,11) :
-#   if i%2 == 0:
-#     print(i)
-
-
-# format() method
-
-# a = 5
-# b = 3
-# c = a + b
-
-# positional substitution
-# print("Addition of {} and {} is {}".format(a, b, c))
-# print("Addition of {a} and {b} is {c}".format(a, b, c))  # Not ok
-
-# index-based substitution
-# print("Addition of {1} and {0} is {2}".format(a, b, c))
-
-# keyword-based substitution
-# print("Addition of {num1} and {num2} is {ans}".format(num1=a, num2=b, ans=c))
-
-
-
-# Float Precision with the format() Method
-
-'''
-Syntax:
-{[index]:[width][.precision][type]}
-'''
-
-'''
-The type can be used with format codes:
-
-'d' for integers
-'f' for floating-point numbers
-'s' for string
-'''
-
-# pi  = 3123.141592
-
-# print('The value of pi is: %.2f' %pi)
-# print('The value of pi is: {0:1.2f}'.format(pi))
-
-# % operator
-
-# a = 5.5
-# b = 3
-# c = a + b
-
-# print("Addition of %.1f and %d is %.2f" %(a, b, c))
-
-
-# f-string
-
-# a = 5
-# b = 3
-# c = a + b
-
-# print(f"Addition of {a} and {b} is {c}")
-
-
-# Indexing
-
-'''
-Syntax: variable[index]
-'''
-
-# name = "Python"
-# print(name[0])   # P
-# print(name[-2])  # o
-
-# fruits = ["apple", "banana", "charry", "mango"]
-# print(fruits[2]) # charry
-# print(fruits[-1]) # mango
-
-# grades = ("A", "B", "C", "F")
-# print(grades[1]) # B
-# print(grades[-1]) # B
-
-# print(grades[0,1,2,3])
-
-# for item in grades :
-#   print(item)
-
-
-# Slicing
-
-'''
-Syntax: variable[start:end:step]
-'''
-
-'''
-Note:
-- step value is 1 by deault.
-- end value is by default set to the length of a given variable.
-'''
-
-# name = "Python"
-# print(name[0:2])    # Py
-# print(name[1:2])    # Py
-# print(name[0:2:1])  # Py
-# print(name[0:5:2])  # Pto
-
-# print(name[:])      # Python
-# print(name[::])     # Python
-
-# print(name[::-1])   # nohtyP
-
-# print(name[::2])    # Pto
-
-
-# import timeit
-
-# list_time = timeit.timeit(stmt="[x+1 for x in my_list]", setup="my_list = [1,2,3,4,5]", number=1000000)
-# array_time = timeit.timeit(stmt="[x+1 for x in my_array]", setup="import array; my_array = array.array('i', [1,2,3,4,5])", number=1000000)
-
-# print("List Time:", list_time)
-# print("Array Time:", array_time)
+# print(s) 
